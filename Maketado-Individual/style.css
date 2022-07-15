@@ -1,0 +1,152 @@
+body {
+    margin: 20px 15px 10px 25px;
+    font-size: 1.5rem;
+}
+
+.maketado {
+    display: flex;
+    flex-direction: column;
+}
+
+/*---------------------------1er fila------------------------------*/
+
+.filaUno {
+    display: flex;
+    height: 100px;
+}
+
+/*estilos de las 2 columnas que pertenecen a la 1ra fila*/
+/*1ra columna*/
+.filaUno__primerCuadro {
+    background: #F0223B;
+    border: 0.1rem solid gray;
+    display: flex;
+    width: 66.6%;
+}
+
+.filaUno__primerCuadro-texto {
+    display: flex;
+    margin: 0 0 0 10px;
+}
+
+/*2da columna*/
+.filaUno__segundoCuadro {
+    align-items: flex-end;
+    background: #FA23A9;
+    border: 0.1rem solid gray;
+    display: flex;
+    justify-content: flex-end;
+    width: 33.3%;
+}
+
+.filaUno__segundoCuadro-texto {
+    display: flex;
+    margin: 0 10px 0 0;
+}
+
+/*---------------------------2da fila------------------------------*/
+
+.filaDos {
+    display: flex;
+    height: 380px;
+}
+
+/*estilos de las 2 columnas que pertenecen a la 2da fila*/
+/*1ra columna*/
+.filaDos__primerCuadro {
+    background: #8D0E96;
+    border: 0.1rem solid gray;
+    display: flex;
+    margin: -2px 0 1px 1px;
+    width: 50%;
+}
+
+.filaDos__primerCuadro-texto {
+    align-items: center;
+    display: flex;
+    margin: 0 0 0 10px;
+}
+
+/*2da columna*/
+.filaDos__segundoCuadro {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+/*1er subcuadro*/
+.filaDos__primerSubcuadro {
+    align-items: center;
+    background: #14E3B5;
+    border: 0.1rem solid gray;
+    display: flex;
+    height: 50%;
+    justify-content: center;
+}
+
+.filaDos__primerSubcuadro-texto {
+    display: flex;
+}
+
+/*2do subcuadro*/
+.filaDos__segundoSubcuadro {
+    align-items: center;
+    background: #15967A;
+    border: 0.1rem solid gray;
+    display: flex;
+    height: 50%;
+    justify-content: center;
+}
+
+.filaDos__segundoSubcuadro-texto {
+    display: flex;
+}
+
+/*---------------------------3ra fila------------------------------*/
+
+.filaTres {
+    display: flex;
+    height: 110px;
+    margin-left: 1px;
+}
+
+/*estilos de las 3 columnas que pertenecen a la 3ra fila*/
+/*1ra columna*/
+.filaTres__primerCuadro {
+    background: #D72BE3;
+    border: 0.1rem solid gray;
+    display: flex;
+    justify-content: flex-end;
+    width: 33.3%;
+}
+
+.filaTres__primerCuadro-texto {
+    margin: 5px 10px 0 0;
+}
+
+/*2da columna*/
+.filaTres__segundoCuadro {
+    align-items: flex-end;
+    background: #F34AFF;
+    border: 0.1rem solid gray;
+    display: flex;
+    width: 33.3%;
+}
+
+.filaTres__segundoCuadro-texto {
+    margin: 0 0 5px 10px;
+}
+
+/*3ra columna*/
+.filaTres__tercerCuadro {
+    align-items: flex-end;
+    background: #7BE32B;
+    border: 0.1rem solid gray;
+    display: flex;
+    justify-content: center;
+    width: 33.3%;
+}
+
+.filaTres__tercerCuadro-texto {
+    margin: 0 0 5px 0;
+}
