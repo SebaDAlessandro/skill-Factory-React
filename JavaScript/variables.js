@@ -110,7 +110,7 @@ console.log('')
 
 /*El método sort() ordena los elementos de un arreglo (array) localmente y devuelve el arreglo
 ordenado. La ordenación no es necesariamente estable. El modo de ordenación por defecto responde a 
-la posición del valor del string de acuerdo a su valor Unicode.*/
+la posición del valor del string de acuerdo a su valor Unicode*/
 
 arraySkillersNames.sort()
 console.log('arraySkillersNames reverse: ',arraySkillersNames)
