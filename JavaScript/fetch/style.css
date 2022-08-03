@@ -1,8 +1,9 @@
-.dashboard{
+.dashboard {
     display: flex;
     flex-wrap: wrap;
 }
-.card, .card2 {
+
+.cardTrue, .cardFalse {
     font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
@@ -14,40 +15,71 @@
     box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+    transition: 1s
 }
-.card2 {
-    background-color: coral;
+
+.cardTrue {
+    background-color:rgb(165, 229, 240);
 }
+
+.cardFalse {
+    background-color: rgb(238, 205, 205) ;
+}
+
 .detail {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 20px
+    margin: 20px;
 }
+
 .container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
+
 .id {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 15px;
     white-space: nowrap;
+    font-size: 30px;
 }
+
 .userId {
     font-weight: bold;
 
 }
+
 .title {
     font-size: medium;
 }
-.state {
 
+.stateF {
+    color: rgb(216, 2, 2);
+    text-align: start;
 }
 
-.card:hover, .card2:hover {
-    transition: transform .2s;
+.state {
+    color: rgb(8, 192, 8);
+    text-align: start;
+}
+
+.cardTrue:hover {
     transform: scale(1.1);
-    background-color: rgb(155, 169, 182);
+    background-color: rgb(67, 80, 197);
+    color: aliceblue;
+}
+
+.cardFalse:hover {
+    transform: scale(1.1);
+    background-color: rgb(189, 129, 154);
+    color: aliceblue;
+}
+
+.cardTrue:active, .cardFalse:active {
+    transform: rotate(180deg);
 }
