@@ -1,0 +1,7 @@
+:root {
+    --font-color-white: rgb(255, 255, 255);
+    --font-color-gray: rgb(205 205 205);
+    
+    --poppins: 'Poppins',sans-serif;
+    --montserrat: 'Montserrat', sans-serif;
+}
