@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="../style/base.css" type="text/css">
     <link rel="stylesheet" href="../style/reset.css" type="text/css">
-    <link rel="stylesheet" href="../style/form.css" type="text/css">
+    <link rel="stylesheet" href="../style/users.css" type="text/css">
     <link rel="stylesheet" href="../style/header.css" type="text/css">
 </head>
 <body>
@@ -23,7 +23,7 @@
             <a href="https://www.avalith.net/" target="_blank">
                 <img class="header__logo" src="../images/logAvalith.jpeg" alt="logo Avalith">
             </a>
-
+            
             <nav>
                 <ul class="header__nav">
                     <li class="header__list"><a class="header__link" href="../index.html"><span class="material-symbols-outlined">home</span></a></li>
@@ -32,55 +32,32 @@
                     <li class="header__list"><a class="header__link" href="./rickAndMorty.html">Rick & Morty</a></li>
                 </ul>
             </nav>
-
-        </div>
         
+        </div>
+
     </header>
 
-    <section class="form">
+    <section class="users">
 
-        <div class="form__titulo">
-            <!--         <h1>Manejo de formularios</h1> -->
-            <p class="form__titulo-detalle">Complete el siguiente formulario.</p>
+        <div class="users__container">
+
+            <ul class="users__list-titles">
+                <li class="parameter__id">ID</li>
+                <li class="parameter__large">Nombre</li>
+                <li class="parameter__xlarge">Email</li>
+                <li class="parameter__large">Teléfono</li>
+                <li class="parameter__large">Ciudad</li>
+                <li class="parameter__large">Empresa</li>
+            </ul>
+
+            <div class="users__parameters" id="usersParameters"></div>
+
         </div>
-
-        <form class="form__container">
-            <div class="form__input-section">
-                <label><h2 class="form__input-title">Nombre: </h2></label>
-                <input
-                id="inputName"
-                class="form__input-name"
-                type="text"
-                placeholder="Máximo 30 letras"
-                pattern="[a-zñA-ZÑ]{1,30}"
-                required
-                >   
-            </div>
-            
-            <div class="form__input-section">
-                <label><h2 class="form__input-title">Email: </h2></label>
-                <input
-                id="inputEmail"
-                class="form__input-email"
-                type="email"
-                placeholder="***@***.***"
-                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$"
-                required
-                >
-            </div>
-
-            <div class="form__textarea-section">
-                <textarea class="form__textarea-menssage" name="message" id="formMensaggeId" rows="10" placeholder="Ingrese su mensaje" required></textarea>
-            </div>
-            
-            <button class="form__btn" id="formBtn">enviar</button>
-
-        </form>
 
     </section>
     
 </body>
 
-    <script src="../javascript/form.js"></script>
+    <script type="module" src="../javascript/users.js"></script>
 
 </html>

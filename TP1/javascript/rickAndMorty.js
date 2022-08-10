@@ -1,13 +1,23 @@
-import { characterService } from "../services/character-services.js";
+import { urlService } from "../services/url-services.js";
 
-characterService.listCharacters().then(data =>{
+function paintCard(status){
+    if(status === 'unknown'){
+        return "initiation__character"
+    }else if(status === 'Alive'){
+        return 'initiation__character-alive'
+    }else{
+        return 'initiation__character-dead'
+    }
+}
+
+urlService.listCharacters().then(data =>{
 
     const dashboardCharactersId = document.querySelector('#dashboardCharacters')
     let body = ``
     data.results.map(({name, image, gender, species, status})=>{
         body +=`
         <div class="card__character">
-            <div class="initiation__character">
+            <div class=${paintCard(status)}>
                 <h1 class="name__character">${name}</h1>
                 <img class="image__character" src="${image}" alt="img character">
             </div>
@@ -16,9 +26,7 @@ characterService.listCharacters().then(data =>{
                 <h2 class="species__character">Especie: ${species}</h2>
                 <h2 class="status__character">Status: ${status}</h2>
                 </div>
-                </div>
-                `
-/*                 <p class=${element.completed ? 'state' : 'stateF'}>Estate: ${element.completed}</p>
- */    })
+            </div>`
+   })
     dashboardCharactersId.innerHTML=body
 })

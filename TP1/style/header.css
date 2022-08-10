@@ -11,22 +11,21 @@ header {
     justify-content: space-between;
     position: fixed;
     background: rgba(0, 0, 0,0.5);
-    height: 15vh;
+
 }
 
 .header__logo {
-    border-radius: 15px;
-    width: 120px;
-    padding: 5px 10px;
+    display: none;
 }
 
 .header__nav {
     display: flex;
-    width: 30rem;
+    width: 95%;
     white-space: nowrap;
     justify-content: space-around;
     margin-right: 30px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .header__link {
@@ -38,6 +37,35 @@ header {
 }
 
 .header__link:hover {
-    color: rgb(0 255 255);
-    text-decoration: underline 2px;
+    color: rgba(230,30,61);
+}
+
+@media screen and (min-width: 768px) {
+
+    .header__container {
+        justify-content: center
+    }
+    
+    .header__nav {
+        width: 30rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .header__container {
+        justify-content: space-between
+    }
+    
+    .header__logo {
+        display: flex;
+        border-radius: 15px;
+        width: 120px;
+        padding: 5px 10px;
+    }
+
+    .header__nav {
+        width: 30rem;
+    }
+    
 }

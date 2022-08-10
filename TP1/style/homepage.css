@@ -1,38 +1,16 @@
 .homepage {
     height: 100vh;
-    background: url('../images/deskBlue.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: rgba(32,27,27);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.homepage__write {
-    display: table;
-}
-
 .presentation__welcome {
-    animation: cursor 0.5s infinite, homepage__write 3.5s steps(42, end);   
-    white-space: nowrap;
-    overflow: hidden;
-    color: var(--font-color-white);
-    border-right: 2.5px solid var(--font-color-white);
     font-family: var(--montserrat);
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin: 0 0 1.5rem 0;
-}
-
-@keyframes cursor {
-    0%{border-color: transparent}
-    50%{border-color: gray}
-}
-
-@keyframes homepage__write {
-    from{width: 0;}
-    to{width: 100%;}
+    color: rgba(230,30,61);
+    font-weight: bolder; 
+    font-size: 1.5rem; 
 }
 
 .presentation__name {
@@ -44,7 +22,87 @@
 }
 
 .presentation__point {
-    color: rgb(255, 0, 0);
+    color: rgba(230,30,61);
     font-size: 1.9rem;
 }
+
+
+@media screen and (min-width: 1024px) {
+
+    .homepage {
+        height: 100vh;
+        background: url('../images/deskBlue.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .homepage__write {
+        display: table;
+    }
+    
+    .presentation__welcome {
+        animation: cursor 0.5s infinite, homepage__write 3.5s steps(42, end);   
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 2.5px solid var(--font-color-white);
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0 0 1.5rem 0;
+    }
+    
+    @keyframes cursor {
+        0%{border-color: transparent}
+        50%{border-color: gray}
+    }
+    
+    @keyframes homepage__write {
+        from{width: 0;}
+        to{width: 100%;}
+    }
+    
+}
+
+/* @media screen and (min-width: 1024px) {
+
+    .homepage {
+        height: 100vh;
+        background: url('../images/deskBlue.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .homepage__write {
+        display: table;
+    }
+    
+    .presentation__welcome {
+        animation: cursor 0.5s infinite, homepage__write 3.5s steps(42, end);   
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 2.5px solid var(--font-color-white);
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0 0 1.5rem 0;
+    }
+    
+    @keyframes cursor {
+        0%{border-color: transparent}
+        50%{border-color: gray}
+    }
+    
+    @keyframes homepage__write {
+        from{width: 0;}
+        to{width: 100%;}
+    }
+    
+} */
 
