@@ -1,6 +1,19 @@
 :root {
     --font-color-white: rgb(255, 255, 255);
     --font-color-gray: rgb(205 205 205);
+    --font-color-alive: rgb(0 255 255);
+    --font-color-dead: rgb(195 0 0);
+    --font-color-negro: rgb(0, 0, 0);
+    --font-avalith-rojo: rgba(230,30,61);
+
+    --background-semi-oscuro: rgba(0, 0, 0,0.5);
+    --background-oscuo: rgb(26, 26, 26);
+    --background-oscuo-transparencia: rgb(0, 0, 0, 0.80);
+    --background-blanco: rgb(255, 255, 255);
+    --background-unknown: rgb(74 125 161 / 50%);
+    --background-alive: rgb(0 179 156 / 50%);
+    --background-dead: rgb(255 94 94);
+    --background-semi-gris: rgb(128 128 128 / 50%);
     
     --poppins: 'Poppins',sans-serif;
     --montserrat: 'Montserrat', sans-serif;

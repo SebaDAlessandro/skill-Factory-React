@@ -6,7 +6,6 @@ urlService.listUsers().then((data)=>{
 
     let body = ``
     data.map(({name, id, email, phone, address, company}) =>{
-        console.log(data)
         body +=`
         <ul class=${id%2===0 ? "users__list-parameters" : "users__list-parameters2"}>
             <li class="parameter__id">${id}</li>
@@ -17,5 +16,9 @@ urlService.listUsers().then((data)=>{
             <li class="parameter__large">${company.name}</li>
         </ul>`
     })
+
     usersParameters.innerHTML = body
+
+}).catch(err =>{
+    console.log(err)
 })

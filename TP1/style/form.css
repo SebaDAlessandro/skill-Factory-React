@@ -1,10 +1,10 @@
 .form { 
-    height: 100vh;
-    background: rgba(32,27,27);
+    align-items: center;
+    background: var(--background-oscuo);
     display: flex;
     flex-direction: column;
+    height: 100vh;
     justify-content: center;
-    align-items: center;
 }
 
 .form__titulo {
@@ -15,105 +15,102 @@
 }
 
 .form__titulo-detalle {
-    width: 90vw;
+    background: var(--background-oscuo);
+    color: var(--font-color-white);
     font-size: 2rem;
-    color: white;
     margin-top: 20px;
-    background: rgba(32,27,27);
     text-align: center;
+    width: 90vw;
 }
 
 .form__container {
-    font-family: var(--montserrat);
-    width: 90vw;
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
-    margin: 15px;
-    background: rgba(0, 0, 0, 0.80);
+    background: var(--background-oscuo-transparencia);
     border-radius: 15px;
+    display: flex;
+    font-family: var(--montserrat);
+    flex-direction: column;
+    margin: 15px;
     padding: 10px;
+    width: 90vw;
 }
 
 .form__input-section {
-    display: flex;
     align-items: center;
+    display: flex;
     width: 100%;
 }
 
 .form__textarea-section {
+    align-items: flex-start;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     margin-top: 15px;
     width: 100%;
 }
 
 .form__input-name, .form__input-email {
+    background: rgb(0 0 0 / 0%);
+    border: 1px solid var(--background-blanco);
+    border-radius: 5px;
+    color: var(--font-color-white);
+    font-family: var(--montserrat);
     font-size: 0.9rem;
     margin: 4px;
-    border-radius: 5px;
-    font-family: var(--montserrat);
-    width: 100%;
     height: 1.2rem;
-    border: 1px solid white;
-    background: rgb(0 0 0 / 0%);
-    color: white;
+    width: 100%;
 }
 
 .form__input-name::placeholder, .form__input-email::placeholder {
-    color: white;
+    color: var(--font-color-white);
 }
 
 .form__textarea-menssage {
-    border-radius: 5px;
-    font-family: var(--montserrat);
-    border: 1px solid white;
-    width: inherit;
-    margin: 3px -5px;
     background: rgb(0 0 0 / 0%);
+    border: 1px solid var(--background-blanco);
+    border-radius: 5px;
+    color: var(--font-color-white);
+    font-family: var(--montserrat);
     font-size: 1rem;
+    margin: 3px -5px;
     margin-bottom: 10px;
-    color: white;
+    width: inherit;
 }
 
 .form__textarea-menssage::placeholder {
-    color: white;
+    color: var(--font-color-white);
     font-size: 1rem;
 }
 
 .form__input-title {
-    width: 80px;
+    color: var(--font-avalith-rojo);
     display: flex;
-    justify-content: center;
-    color: rgba(230,30,61);;
     font-weight: bold;
+    justify-content: center;
+    width: 80px;
 }
 
 .form__btn {
-    background: rgba(0, 0, 0, 0.80);
-    width: 150px;
-    font-weight: bolder;
-    color: rgb(255 255 255);
-    border: 1px solid white;
-    border-radius: 10px;
-    height: 1.7rem;
-    transition: 0.5s;
-    display: flex;
     align-items: center;
+    background: var(--background-oscuo-transparencia);
+    border: 1px solid var(--background-blanco);
+    border-radius: 10px;
+    color: var(--font-color-white);
+    display: flex;
+    font-weight: bolder;
+    height: 1.7rem;
     justify-content: center;
+    transition: 0.5s;
+    width: 150px;
 }
 
 .form__btn:hover {
-    background: white;
-    color: rgba(230,30,61);
-}
-
-@media screen and (min-width: 768px) {
-
+    background: var(--background-blanco);
+    color: var(--font-avalith-rojo);
 }
 
 @media screen and (min-width: 1024px) {
+    
     .form{
         background: url('../images/deskBlue.png');
         background-position: center;
@@ -126,12 +123,13 @@
     }
 
     .form__titulo-detalle {
-        width: 50vw;
-        margin-top: 20px;
-        background: rgba(0, 0, 0, 0.80);
-        padding: 15px;
+        background: var(--background-oscuo-transparencia);
         border: 1px solid transparent;
         border-radius: 10px;
+        margin-top: 20px;
+        padding: 15px;
         text-align: center;
+        width: 50vw;
     }
+
 }
