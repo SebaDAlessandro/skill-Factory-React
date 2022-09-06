@@ -1,16 +1,35 @@
 import TukiComponent from "./components/TukiComponent";
+import Count from "./components/Count"
+import ItemListContainer from "./components/ItemListContainer";
+import NavBar from "./components/NavBar";
 
 
-function App() {//<---- esto se llama componente funcional
+const App = ()=>{//<---- esto se llama componente funcional
+
+  //IMPORTANTE: en esta parte se coloca la logica del componente
+  
+  //console.log('Ingresando a App')
+  //const animalsArray = ['Leon', 'Tigre', 'Pantera', 'Puma', 'Gato']
+  
   return (
+    
+    //el return solo puede renderizar una sola cosa
+    
+    <div className="App">
+      <NavBar />
+      <ItemListContainer 
+        nameEcommerce="Tienda Ficticia"
+      />
 
-/*     el return solo puede renderizar una sola cosa
- */      <div className="App">
-
-        <h1>Hola mundo</h1>
-        <h2>React: una genialidad!</h2>
-
-        <TukiComponent/>
+{/*         <TukiComponent
+          animals={animalsArray}
+        />
+        <Count 
+          id={1}
+          stock={10}
+          initial={1}
+          userName='Seba'
+          /> */}
 
       </div>
 
