@@ -1,0 +1,51 @@
+.task__container, .task__container-false {
+    align-items: center;
+    background: rgb(0 0 0 / 35%);
+    border: 2px solid var(--background-celeste);
+    border-radius: 5px;
+    color: var(--font-color-white);
+    display: flex;
+    font-family: var(--roboto);
+    justify-content: space-between;
+    margin-bottom: 5px;
+    padding: 4px;
+    width: 90vw;
+}
+
+.task__completo-true {
+    background: green;
+}
+
+.task__title , .task__detalle{
+    padding: 5px;
+}
+
+.task__title {
+    font-weight: 700;
+}
+
+.task__btn-container {
+    display: flex;
+}
+
+.task__btn-complete, .task__btn-delete {
+    cursor: pointer;
+    margin-right: 5px;
+    transition: 0.5s;
+}
+
+.task__btn-complete:hover {
+    transform: scale(1.2);
+    color: var(--font-color-ok);
+}
+
+.task__btn-delete:hover {
+    transform: scale(1.2);
+    color: var(--font-color-nok);
+}
+
+@media screen and (min-width: 1024px) {
+    .task__container{
+        width: 70vw;
+    }
+}
