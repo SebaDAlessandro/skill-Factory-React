@@ -1,13 +1,35 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { deleteTask } from '../features/tasks/tasksSlice'
+import { Link } from 'react-router-dom'
+
 
 const TaskList = () => {
-  const state = useSelector((state) => state)
-  console.log('Estado: ',state)
   const tasks = useSelector((state)=> state.tasks)
-  console.log('Tareas: ',tasks)
+  const dispatch = useDispatch()
+  const handleDelete = (id)=>{
+    dispatch(
+      deleteTask(id)
+    )
+  }
+
   return (
-    <div>TaskList</div>
+    <>
+      <header>
+        <h2>Task: {tasks.length}</h2>
+        <Link to={'/create-task'}>Agregar Tarea</Link>
+      </header>
+      {tasks.length>0 ? tasks.map(({ id, titulo, descripcion, completo })=>{
+        return(
+          <div key={id}>
+            <h3>{titulo}</h3>
+            <p>{descripcion}</p>
+            <button onClick={()=>handleDelete(id)}>delete</button>
+            <Link to={`/edit-task/${id}`}>edit</Link>
+          </div>
+        )
+      }):(<h2>Carga tu lista de pendientes</h2>)}
+    </>
   )
 }
 

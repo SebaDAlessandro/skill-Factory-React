@@ -21,6 +21,7 @@ const TaskList = () => {
   }
 
   const modificarCompleto = (id, completo)=>{
+    //console.log(completo)
     const taskCompleto = taskList.filter(task => task.id === id)
     setTaskList(oldList => oldList.filter(task => task.id !== id))
     if(completo){
@@ -46,7 +47,7 @@ const TaskList = () => {
 
   return (
     <div className='taskList__container'>
-      {console.log('TaskList: ',taskList)}
+      {/* {console.log('TaskList: ',taskList)} */}
       <TaskForm 
         agregarTarea = {agregarTarea}
         id = {uuidv4()}
@@ -55,7 +56,7 @@ const TaskList = () => {
       (
       <div>
         {taskList.map((task,index)=>{
-          console.log(task)
+          //console.log(task)
           return(
             <Task
               key = {index}

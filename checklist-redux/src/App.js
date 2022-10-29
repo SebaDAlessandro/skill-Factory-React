@@ -1,14 +1,18 @@
 import './App.css';
-import Task from './components/Task';
 import TaskForm from './components/TaskForm';
 import TaskList from './components/TaskList';
+import { Routes, Route } from 'react-router-dom'
+
 
 function App() {
+
   return (
     <div>
-      <TaskList />
-      <TaskForm />
-      <Task />
+      <Routes>
+        <Route path='/' element={<TaskList />}/>
+        <Route path='/create-task' element={ <TaskForm />}/>
+        <Route path='/edit-task/:id' element={ <TaskForm />}/>
+      </Routes>
     </div>
   );
 }

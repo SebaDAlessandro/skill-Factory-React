@@ -1,31 +1,23 @@
 import React from 'react'
 import '../styles/TaskForm.css'
 import { useForm } from "react-hook-form";
-import { useState } from 'react';
-import { useEffect } from 'react';
+
 
 const TaskForm = ({agregarTarea, id}) => {
 
-  const { register, handleSubmit, watch, formState: {errors} } = useForm({defaultValues:{taskTitulo:"", taskDetalle:""}});
+  const { register, handleSubmit, watch, formState: {errors} } = useForm();
   
   watch()
 
-  const [titulo, setTitulo] = useState('')
-  useEffect(()=>{
-
-  },[titulo])
-
-   
   const onSubmit = (data, e) => {
     //console.log('data: ',data.taskTitulo)
     let completo = false;
-    setTitulo(data.titulo)
-    agregarTarea(id, titulo, data.taskDetalle, completo)
-    setTitulo('')
+    agregarTarea(id, data.taskTitulo, data.taskDetalle, completo)
         
     // limpiar campos
     e.target.reset()
-    //IMPORTANTE! como limpiamos los datos de la cache? ---> se usa el .focus()? ---> donde?
+    //IMPORTANTE! como limpiamos los datos de la cache? ---> donde?
+    // como hago para que luego de cada carga se vuelva a cargar el input con la barra "|"
   };
 
   return (
